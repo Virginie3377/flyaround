@@ -167,4 +167,89 @@ class Flight
     {
         return $this->takeofTime;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $planes;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->planes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add plane
+     *
+     * @param \WCS\CoavBundle\Entity\Reservation $plane
+     *
+     * @return Flight
+     */
+    public function addPlane(\WCS\CoavBundle\Entity\Reservation $plane)
+    {
+        $this->planes[] = $plane;
+
+        return $this;
+    }
+
+    /**
+     * Remove plane
+     *
+     * @param \WCS\CoavBundle\Entity\Reservation $plane
+     */
+    public function removePlane(\WCS\CoavBundle\Entity\Reservation $plane)
+    {
+        $this->planes->removeElement($plane);
+    }
+
+    /**
+     * Get planes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlanes()
+    {
+        return $this->planes;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $flights;
+
+
+    /**
+     * Add flight
+     *
+     * @param \WCS\CoavBundle\Entity\Reservation $flight
+     *
+     * @return Flight
+     */
+    public function addFlight(\WCS\CoavBundle\Entity\Reservation $flight)
+    {
+        $this->flights[] = $flight;
+
+        return $this;
+    }
+
+    /**
+     * Remove flight
+     *
+     * @param \WCS\CoavBundle\Entity\Reservation $flight
+     */
+    public function removeFlight(\WCS\CoavBundle\Entity\Reservation $flight)
+    {
+        $this->flights->removeElement($flight);
+    }
+
+    /**
+     * Get flights
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFlights()
+    {
+        return $this->flights;
+    }
 }

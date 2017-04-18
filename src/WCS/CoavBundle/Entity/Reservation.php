@@ -126,4 +126,42 @@ class Reservation
     {
         return $this->passengers;
     }
+    /**
+     * @var \WCS\CoavBundle\Entity\Flight
+     */
+    private $flights;
+
+
+    /**
+     * Set flight
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $flight
+     *
+     * @return Reservation
+     */
+    public function setFlight(\WCS\CoavBundle\Entity\Flight $flight = null)
+    {
+        $this->flights = $flight;
+
+        return $this;
+    }
+
+    /**
+     * Get flight
+     *
+     * @return \WCS\CoavBundle\Entity\Flight
+     */
+    public function getFlight()
+    {
+        return $this->flights;
+    }
+
+
+
+    /**
+     * @var \WCS\CoavBundle\Entity\Flight
+     */
+    private $flight;
+
+
 }

@@ -24,8 +24,16 @@ WCS\CoavBundle\Entity\Flight:
             nullable: true
     lifecycleCallbacks: {  }
 
-manyToOne:
-    departure:
-        targetEntity: WCS\CoavBundle\Entity\Terrain
-        inversedBy: departures
+    manyToOne:
+        departure:
+            targetEntity: WCS\CoavBundle\Entity\Terrain
+            inversedBy: departures
 
+    oneToMany:
+        flights:
+            targetEntity: WCS\CoavBundle\Entity\Reservation
+            mappedBy: flight
+
+    manyToOne:
+        plane:
+            targetEntity: WCS\CoavBundle\Entity\plane_model
