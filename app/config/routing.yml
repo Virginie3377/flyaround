@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 wcs_coav:
     resource: "@WCSCoavBundle/Resources/config/routing.yml"
     prefix:   /
 
 
-=======
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
->>>>>>> cc04e5be923ce9e2e8fc949d1953d3c29012de00
+
