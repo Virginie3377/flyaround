@@ -21,10 +21,6 @@ WCS\CoavBundle\Entity\Flight:
             nullable: true
     lifecycleCallbacks: {  }
 
-    manyToOne:
-        departure:
-            targetEntity: WCS\CoavBundle\Entity\Terrain
-            inversedBy: departures
 
     oneToMany:
         flights:
@@ -34,8 +30,10 @@ WCS\CoavBundle\Entity\Flight:
     manyToOne:
         plane:
             targetEntity: WCS\CoavBundle\Entity\plane_model
-
-    manyToOne:
+            inversedBy: planes
         arrival:
             targetEntity: WCS\CoavBundle\Entity\Terrain
             inversedBy: arrivals
+        departure:
+            targetEntity: WCS\CoavBundle\Entity\Terrain
+            inversedBy: departures
