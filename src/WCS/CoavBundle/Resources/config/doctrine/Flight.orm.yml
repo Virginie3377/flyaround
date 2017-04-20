@@ -23,14 +23,14 @@ WCS\CoavBundle\Entity\Flight:
 
 
     oneToMany:
-        flights:
+        reservations:
             targetEntity: WCS\CoavBundle\Entity\Reservation
             mappedBy: flight
 
     manyToOne:
         plane:
-            targetEntity: WCS\CoavBundle\Entity\plane_model
-            inversedBy: planes
+            targetEntity: WCS\CoavBundle\Entity\PlaneModel
+            inversedBy: flights
         arrival:
             targetEntity: WCS\CoavBundle\Entity\Terrain
             inversedBy: arrivals

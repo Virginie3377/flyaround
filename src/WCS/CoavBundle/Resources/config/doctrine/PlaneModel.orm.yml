@@ -28,6 +28,6 @@ WCS\CoavBundle\Entity\PlaneModel:
     lifecycleCallbacks: {  }
 
 onetoMany:
-        planes:
-            targetEntity: WCS\CoavBundle\Entity\Reservation
+        flights:
+            targetEntity: WCS\CoavBundle\Entity\Flight
             mappedBy: plane
